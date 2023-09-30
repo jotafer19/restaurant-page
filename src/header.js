@@ -1,6 +1,4 @@
 export default function() {    
-    const body = document.querySelector("body");
-
     const header = document.createElement("header");
     header.setAttribute("id", "header");
 
@@ -26,7 +24,5 @@ export default function() {
     header.appendChild(title);
     header.appendChild(tabbedBrowsing);
 
-    body.appendChild(header);
-
-    return body;
+    return header;
 }

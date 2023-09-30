@@ -39,4 +39,5 @@ header > ul {
     min-height: 90svh;
     padding: var(--default-padding);
     backdrop-filter: blur(1px);
+    place-content: center;
 }

@@ -1,3 +1,4 @@
+import header from "./header.js";
 import home from "./home.js";
 
 const firstLoad = () => {
@@ -8,7 +9,7 @@ const firstLoad = () => {
 
     container.appendChild(home());
 
-    body.appendChild(container);
+    body.append(header(), container);
 
     return body;
 }

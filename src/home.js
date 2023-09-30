@@ -11,10 +11,8 @@ export default function() {
     homeContainer.appendChild(bannerText);
 
     const descriptionText = document.createElement("h3");
-    descriptionText.textContent = "Baratie is a restaurant located by the sea and surrounded by gardens."
-    const breakLine = document.createElement("br");
-    descriptionText.appendChild(breakLine);
-    descriptionText.textContent += "We have awesome recipes and the most talented chefs in town.";
+    descriptionText.innerHTML = "Baratie is a restaurant located by the sea and surrounded by gardens." + 
+    "<br>" + "We have awesome recipes and the most talented chefs in town.";
     homeContainer.appendChild(descriptionText);
 
     return homeContainer;
