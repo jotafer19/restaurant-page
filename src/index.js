@@ -1,3 +1,6 @@
-import homeScreen from "./first-load.js";
+import "./style.css";
+import header from "./header.js";
+import firstLoad from "./first-load.js";
 
-homeScreen();
+header();
+firstLoad();

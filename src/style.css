@@ -1,0 +1,42 @@
+:root {
+    --default-padding: 0 30px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./assets/images/background_image.jpg);
+    background-size: cover;
+}
+
+/* ------- HEADER ------- */
+
+header {
+    min-height: 10svh;
+    padding: var(--default-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+header > ul {
+    display: flex;
+    gap: 30px;
+}
+
+.web-browsing {
+    list-style: none;
+}
+
+/* ------- MAIN ------- */
+
+#main-container {
+    min-height: 90svh;
+    padding: var(--default-padding);
+    backdrop-filter: blur(1px);
+}

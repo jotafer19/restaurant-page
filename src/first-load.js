@@ -1,8 +1,16 @@
-import header from "./header.js";
+import home from "./home.js";
 
-const homeScreen = () => {
-    const content = document.querySelector("#content");
-    content.appendChild(header());
+const firstLoad = () => {
+    const body = document.querySelector("body");
+
+    const container = document.createElement("main");
+    container.setAttribute("id", "main-container");
+
+    container.appendChild(home());
+
+    body.appendChild(container);
+
+    return body;
 }
 
-export default homeScreen;
+export default firstLoad;
