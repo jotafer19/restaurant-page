@@ -1,4 +1,4 @@
-export default function() {
+export default function homePage() {
     const homeContainer = document.createElement("div");
     homeContainer.setAttribute("id", "home-container");
 

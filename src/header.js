@@ -1,4 +1,4 @@
-export default function() {    
+export default function createHeader() {    
     const header = document.createElement("header");
     header.setAttribute("id", "header");
 

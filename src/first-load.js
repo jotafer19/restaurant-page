@@ -1,17 +1,10 @@
-import header from "./header.js";
-import home from "./home.js";
+import createHeader from "./header.js";
+import homePage from "./home.js";
 
-const firstLoad = () => {
+export default function firstLoad() {
     const body = document.querySelector("body");
 
-    const container = document.createElement("main");
-    container.setAttribute("id", "main-container");
-
-    container.appendChild(home());
-
-    body.append(header(), container);
+    body.append(createHeader(), homePage());
 
     return body;
 }
-
-export default firstLoad;

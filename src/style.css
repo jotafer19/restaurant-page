@@ -1,5 +1,8 @@
 :root {
     --default-padding: 0 30px;
+    --text-white-color: #e2e2e2;
+    --backdrop-filter: grayscale(40%);
+    --card-background: #0000007c;
 }
 
 * {
@@ -9,7 +12,7 @@
 }
 
 body {
-    background-image: url(./assets/images/background_image.jpg);
+    background-image: url("./assets/images/background_image.jpg");
     background-size: cover;
 }
 
@@ -21,7 +24,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: aliceblue;
+    backdrop-filter: var(--backdrop-filter);
 }
 
 header > ul {
@@ -33,11 +36,47 @@ header > ul {
     list-style: none;
 }
 
-/* ------- MAIN ------- */
+/* ------- HOME ------- */
 
-#main-container {
+#home-container {
     min-height: 90svh;
     padding: var(--default-padding);
-    backdrop-filter: blur(1px);
+    color: var(--text-white-color);
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    justify-items: center;
+    align-items: center;
+    gap: 8px;
     place-content: center;
+    backdrop-filter: var(--backdrop-filter);
+}
+
+/* ------- MENU ------- */
+
+#menu-container {
+    padding: var(--default-padding);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    place-content: center;
+}
+
+.meal-card {
+    width: 300px;
+    background-color: var(--card-background);
+    color: var(--text-white-color);
+    padding: 10px;
+    display: grid;
+    grid-template-rows: min-content min-content 1fr min-content;
+    justify-items: center;
+    gap: 8px;
+}
+
+.meal-image {
+    min-width: 280px;
+    height: 187px;
+}
+
+.meal-description {
+    font-size: 0.7rem;
 }
