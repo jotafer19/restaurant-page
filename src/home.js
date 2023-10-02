@@ -1,4 +1,5 @@
 export default function homePage() {
+    const body = document.querySelector("body");
     const homeContainer = document.createElement("div");
     homeContainer.setAttribute("id", "home-container");
 
@@ -15,5 +16,7 @@ export default function homePage() {
     "<br>" + "We have awesome recipes and the most talented chefs in town.";
     homeContainer.appendChild(descriptionText);
 
-    return homeContainer;
+    body.appendChild(homeContainer)
+
+    return body;
 }
