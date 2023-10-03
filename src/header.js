@@ -14,6 +14,7 @@ export default function createHeader() {
     const homeTab = document.createElement("li");
     homeTab.textContent = "Home";
     homeTab.classList.add("web-browsing");
+    homeTab.classList.add("active")
     homeTab.setAttribute("id", "home-btn");
     const menuTab = document.createElement("li");
     menuTab.textContent = "Menu";

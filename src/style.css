@@ -77,13 +77,16 @@ header > ul {
     background-color: var(--text-white-color);
     text-shadow: none;
     border-bottom: 4px solid #b8b8b8;
+    border-radius: 4px;
 }
 
+.web-browsing.active,
 .web-browsing:active {
     color: var(--text-orange-color);
     text-shadow: none;
     background-color: var(--card-background);
     border-bottom: 4px solid var(--text-orange-color);
+    border-radius: 4px;
 }
 
 /* ------- HOME ------- */

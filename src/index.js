@@ -7,20 +7,31 @@ import contactPage from "./contact.js";
 firstLoad();
 
 const body = document.querySelector("body");
-const homeButton = document.querySelector("#home-btn");
-const menuButton = document.querySelector("#menu-btn");
-const contactButton = document.querySelector("#contact-btn");
 
-homeButton.addEventListener("click", () => {
-    body.removeChild(document.querySelector("body > div"));
-    homePage();
-})
-menuButton.addEventListener("click", () => {
-    body.removeChild(document.querySelector("body > div"));
-    menuPage();
-})
+const setActiveButton = (button) => {
+    const currentActive = document.querySelector(".active");
 
-contactButton.addEventListener("click", () => {
-    body.removeChild(document.querySelector("body > div"));
-    contactPage();
+    if (button != currentActive) {
+        currentActive.classList.toggle("active");
+        button.classList.toggle("active");
+    }
+}
+
+const browsingButtons = document.querySelectorAll(".web-browsing");
+
+browsingButtons.forEach(button => {
+    button.addEventListener("click", (event) => {
+        setActiveButton(event.target);
+        switch (event.target.textContent) {
+            case "Home":
+                body.replaceChild(homePage(),document.querySelector(".main-container"));
+                break;
+            case "Menu":
+                body.replaceChild(menuPage(), document.querySelector(".main-container"))
+                break;
+            case "Contact":
+                body.replaceChild(contactPage(), document.querySelector(".main-container"))
+                break;
+        }
+    })
 })

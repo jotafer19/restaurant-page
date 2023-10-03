@@ -2,10 +2,9 @@ import mapImage from "./assets/images/maps.png";
 import createLogo from "./create-logo";
 
 export default function contact() {
-    const body = document.querySelector("body");
-    
     const contactContainer = document.createElement("div");
     contactContainer.setAttribute("id", "contact-container");
+    contactContainer.classList.add("main-container");
 
     const informationContainer = document.createElement("div");
     informationContainer.setAttribute("id", "contact-information");
@@ -69,8 +68,6 @@ export default function contact() {
 
     contactContainer.append(informationContainer, contactForm, mapContainer);
 
-    body.appendChild(contactContainer);
-
-    return body;
+    return contactContainer;
 
 }

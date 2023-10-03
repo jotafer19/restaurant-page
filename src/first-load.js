@@ -4,8 +4,7 @@ import homePage from "./home.js";
 export default function firstLoad() {
     const body = document.querySelector("body");
 
-    body.append(createHeader());
-    homePage();
+    body.append(createHeader(), homePage());
 
     return body;
 }
