@@ -1,4 +1,6 @@
 import mapImage from "./assets/images/maps.png";
+import phone from "./assets/images/phone.svg";
+import address from "./assets/images/address.svg";
 import createLogo from "./create-logo";
 
 export default function contact() {
@@ -12,9 +14,21 @@ export default function contact() {
     restaurantLogo.classList.add("restaurant-logo");
     restaurantLogo.appendChild(createLogo());
     const addressContainer = document.createElement("div");
+    addressContainer.classList.add("info-container");
+    const addressImage = new Image();
+    addressImage.src = address;
+    addressImage.classList.add("icon");
+    const addressTextContainer = document.createElement("div");
+    addressTextContainer.innerHTML = "3375 Franklin Street," + "<br>" + "36104, Montgomery," + "<br>" +  "Alabama";
+    addressContainer.append(addressImage, addressTextContainer);
     const phoneContainer = document.createElement("div");
-    addressContainer.innerHTML = "3375 Franklin Street," + "<br>" + "36104, Montgomery," + "<br>" +  "Alabama";
-    phoneContainer.innerHTML = "334-652-0977" + "<br>" + "334-325-6533";
+    phoneContainer.classList.add("info-container");
+    const phoneImage = new Image();
+    phoneImage.src = phone;
+    phoneImage.classList.add("icon");
+    const phoneTextContainer = document.createElement("div");
+    phoneTextContainer.innerHTML = "334-652-0977" + "<br>" + "334-325-6533";
+    phoneContainer.append(phoneImage, phoneTextContainer);
 
     informationContainer.append(restaurantLogo, addressContainer, phoneContainer);
 

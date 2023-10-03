@@ -141,6 +141,11 @@ header > ul {
     justify-items: center;
     gap: 8px;
     border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.meal-card:hover {
+    background-color: #000000c3;
 }
 
 .meal-image {
@@ -190,6 +195,16 @@ header > ul {
     align-items: center;
     line-height: 2rem;
     border-radius: var(--border-radius);
+}
+
+.info-container {
+    display: flex;
+    gap: 20px;
+}
+
+.icon {
+    color: var(--text-white-color);
+    width: 2rem;
 }
 
 #contact-form {
