@@ -1,0 +1,278 @@
+@font-face {
+    font-family: "LilitaOne-Regular";
+    src: url(../../assets/fonts/LilitaOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Onest-Regular";
+    src: url(../../assets/fonts/Onest-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Onest-Bold";
+    src: url(../../assets/fonts/Onest-Bold.ttf);
+}
+
+:root {
+    --default-padding: 0 30px;
+    --text-white-color: #ecebe9;
+    --text-orange-color: #ff9000;
+    --backdrop-filter: grayscale(50%);
+    --card-background: #0000008f;
+    --border-radius: 12px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Onest-Regular";
+    font-size: 1.3rem;
+    background-image: url("../../assets/images/background_image.jpg");
+    background-size: cover;
+}
+
+/* ------- HEADER ------- */
+
+header {
+    min-height: 10svh;
+    padding: var(--default-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: var(--backdrop-filter);
+}
+
+.restaurant-logo {
+    font-family: "LilitaOne-Regular";
+    font-size: 2.5rem;
+    color: var(--text-white-color);
+}
+
+.baratie-logo-word {
+    color: var(--text-orange-color);
+}
+
+header > ul {
+    display: flex;
+    gap: 1rem;
+    box-sizing: border-box;
+}
+
+.web-browsing {
+    list-style: none;
+    color: var(--text-white-color);
+    text-shadow: 2px 2px 10px black;
+    font-family: "Onest-Bold";
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-bottom: 4px solid transparent;
+}
+
+.web-browsing:hover {
+    color: var(--text-orange-color);
+    background-color: var(--text-white-color);
+    text-shadow: none;
+    border-bottom: 4px solid #b8b8b8;
+    border-radius: 4px;
+}
+
+.web-browsing.active,
+.web-browsing:active {
+    color: var(--text-orange-color);
+    text-shadow: none;
+    background-color: var(--card-background);
+    border-bottom: 4px solid var(--text-orange-color);
+    border-radius: 4px;
+}
+
+/* ------- HOME ------- */
+
+#home-container {
+    min-height: 90svh;
+    padding: var(--default-padding);
+    color: var(--text-white-color);
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+    place-content: center;
+    backdrop-filter: var(--backdrop-filter);
+    text-shadow: 2px 2px 10px black;
+}
+
+#home-container > h3 {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+#home-container > h2 {
+    font-family: "Onest-Bold";
+    font-size: 2.4rem;
+}
+
+.add-orange-color {
+    color: var(--text-orange-color);
+}
+
+/* ------- MENU ------- */
+
+#menu-container {
+    min-height: 90svh;
+    padding: var(--default-padding);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    place-content: center;
+    backdrop-filter: var(--backdrop-filter);
+}
+
+.meal-card {
+    width: 300px;
+    background-color: var(--card-background);
+    color: var(--text-white-color);
+    padding: 10px;
+    display: grid;
+    grid-template-rows: min-content min-content 1fr min-content;
+    justify-items: center;
+    gap: 8px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.meal-card:hover {
+    background-color: #000000c3;
+}
+
+.meal-image {
+    min-width: 280px;
+    height: 187px;
+    border-radius: var(--border-radius);
+}
+
+.meal-name {
+    font-family: "Onest-Bold";
+}
+
+.meal-description {
+    font-size: 0.7rem;
+}
+
+.meal-price {
+    font-family: "Onest-Bold";
+    font-size: 1rem;
+    background-color: var(--text-orange-color);
+    padding: 2px 12px;
+    border-radius: 4px;
+}
+
+/* ------- CONTACT ------- */
+
+#contact-container {
+    min-height: 90svh;
+    padding: 30px;
+    color: var(--text-white-color);
+    display: grid;
+    grid-template-columns: 700px min-content;
+    grid-template-rows: min-content 440px;
+    place-content: center;
+    backdrop-filter: var(--backdrop-filter);
+    gap: 16px;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+
+#contact-information {
+    grid-column: 1 / 3;
+    background-color: var(--card-background);
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 2rem;
+    border-radius: var(--border-radius);
+}
+
+.info-container {
+    display: flex;
+    gap: 16px;
+}
+
+.icon {
+    color: var(--text-white-color);
+    width: 2rem;
+}
+
+#contact-form {
+    background-color: var(--card-background);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    border-radius: var(--border-radius);
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: var(--border-radius);
+}
+
+.input-container:nth-child(3) > label {
+    align-self: flex-start;
+}
+
+.input-container > input,
+.input-container > textarea {
+    width: 400px;
+    padding: 6px;
+    border-radius: var(--border-radius);
+}
+
+#message-input {
+    height: 220px;
+    resize: none;
+}
+
+#submit-btn {
+    padding: 6px 20px;
+    background-color: var(--text-orange-color);
+    color: var(--text-white-color);
+    border: 2px solid var(--text-orange-color);
+    border-radius: var(--border-radius);
+    font-size: 1.2rem;
+    font-family: "Onest-Bold";
+}
+
+#submit-btn:hover {
+    border: 2px solid var(--text-orange-color);
+    background-color: var(--card-background);
+    color: var(--text-orange-color);
+}
+
+#submit-btn:active {
+    scale: 0.95;
+}
+
+#map-container {
+    width: 305px;
+    padding: 30px;
+    background-color: var(--card-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius);
+}
+
+#mapImage {
+    height: 100%;
+    width: 100%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
