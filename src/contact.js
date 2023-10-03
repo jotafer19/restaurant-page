@@ -1,4 +1,5 @@
 import mapImage from "./assets/images/maps.png";
+import createLogo from "./create-logo";
 
 export default function contact() {
     const body = document.querySelector("body");
@@ -10,7 +11,7 @@ export default function contact() {
     informationContainer.setAttribute("id", "contact-information");
     const restaurantLogo = document.createElement("div");
     restaurantLogo.classList.add("restaurant-logo");
-    restaurantLogo.textContent = "Baratie Restaurant";
+    restaurantLogo.appendChild(createLogo());
     const addressContainer = document.createElement("div");
     const phoneContainer = document.createElement("div");
     addressContainer.innerHTML = "3375 Franklin Street," + "<br>" + "36104, Montgomery," + "<br>" +  "Alabama";
@@ -28,6 +29,7 @@ export default function contact() {
     nameLabel.setAttribute("for", "name-input");
     const nameInput = document.createElement("input");
     nameInput.setAttribute("id", "name-input");
+    nameInput.setAttribute("required", "");
     nameContainer.append(nameLabel, nameInput);
 
     const emailContainer = document.createElement("div");
@@ -37,6 +39,8 @@ export default function contact() {
     emailLabel.setAttribute("for", "email-input");
     const emailInput = document.createElement("input");
     emailInput.setAttribute("id", "email-input");
+    emailInput.setAttribute("type", "email");
+    emailInput.setAttribute("required", "");
     emailContainer.append(emailLabel, emailInput);
 
     const messageContainer = document.createElement("div");
@@ -46,6 +50,7 @@ export default function contact() {
     messageLabel.setAttribute("for", "message-input");
     const messageInput = document.createElement("textarea");
     messageInput.setAttribute("id", "message-input");
+    messageInput.setAttribute("required", "");
     messageContainer.append(messageLabel, messageInput);
 
     const submitButton = document.createElement("button");

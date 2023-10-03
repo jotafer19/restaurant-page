@@ -1,12 +1,12 @@
-import menu from "./menu";
+import createLogo from "./create-logo";
 
 export default function createHeader() {    
     const header = document.createElement("header");
     header.setAttribute("id", "header");
 
     const title = document.createElement("div");
-    title.setAttribute("id", "restaurant-name");
-    title.textContent = "My Restaurant";
+    title.classList.add("restaurant-logo");
+    title.append(createLogo());
 
     const tabbedBrowsing = document.createElement("ul");
     tabbedBrowsing.setAttribute("id", "tab-container");
